@@ -898,7 +898,7 @@
 
   /* RESPONSIVE */
   @media (max-width: 900px) {
-    nav { padding: 20px 30px; }
+    nav { padding: 20px 24px; }
     .nav-links { display: none; }
     .manifesto-inner,
     .projeto-grid,
@@ -908,11 +908,140 @@
     .incluso-grid,
     .tech-grid { grid-template-columns: 1fr; }
     .stats-grid { grid-template-columns: 1fr 1fr; }
-    .section-inner, .manifesto-inner { padding: 0 30px; }
-    .capa-content { padding: 100px 30px 140px; }
+    .section-inner, .manifesto-inner { padding: 0 24px; }
+    .capa-content { padding: 100px 24px 140px; }
     .valores-cell { padding: 20px 24px; }
-    .enc-content { padding: 60px 30px; }
-    .enc-footer { padding: 0 30px; }
+    .enc-content { padding: 60px 24px; }
+    .enc-footer { padding: 0 24px; }
+    .form-body { padding: 40px 24px 80px; }
+    /* Tabs scroll horizontal */
+    .espacos-tabs { overflow-x: auto; -webkit-overflow-scrolling: touch; flex-wrap: nowrap; padding-bottom: 4px; }
+    .tab-btn { white-space: nowrap; padding: 16px 20px; font-size: 11px; }
+    /* Galeria em 2 colunas */
+    #galeria > div { grid-template-columns: 1fr 1fr !important; }
+    /* Incluso grid */
+    .incluso-grid { gap: 2px; }
+    /* Parceiro card não sticky no mobile */
+    .parceiro-card { position: static; }
+    /* Hero orbi height */
+    .orbi-hero > div { height: 50vh !important; }
+    /* Foyer grid */
+    #foyer-grid { grid-template-columns: 1fr !important; }
+    /* Valores table */
+    .val-price { font-size: 28px; }
+    .val-quantidade { font-size: 20px; }
+  }
+
+  @media (max-width: 640px) {
+    /* NAV */
+    nav { padding: 16px 20px; }
+    .nav-logo { font-size: 11px; letter-spacing: 0.2em; }
+
+    /* CAPA */
+    .capa-content { padding: 80px 20px 120px; }
+    .capa-title { font-size: clamp(28px, 8vw, 48px); line-height: 1.1; }
+    .capa-subtitle { font-size: 11px; letter-spacing: 0.2em; margin-top: 20px; }
+    .capa-year, .capa-left-label { font-size: 10px; }
+
+    /* SECTIONS */
+    .section-inner, .manifesto-inner { padding: 0 20px; }
+    #manifesto, #ecossistema, #projeto, #localizacao,
+    #espacos, #tecnologia, #parceiros-intro, #carol,
+    #thiago, #valores, #incluso { padding: 72px 0; }
+
+    /* SECTION LABELS & TITLES */
+    .section-label { font-size: 10px; letter-spacing: 0.35em; }
+    .section-title { font-size: clamp(28px, 7vw, 44px); margin-bottom: 36px; }
+
+    /* MANIFESTO */
+    .manifesto-inner { gap: 40px; }
+    .manifesto-quote { font-size: clamp(32px, 8vw, 52px); }
+    .manifesto-text p { font-size: 15px; }
+    .manifesto-img { height: 220px !important; }
+
+    /* ECOSSISTEMA */
+    .stats-grid { grid-template-columns: 1fr 1fr; gap: 2px; }
+    .stat-card { padding: 32px 20px; }
+    .stat-number { font-size: 48px; }
+    .eco-text { font-size: 15px; padding-left: 20px; }
+
+    /* PROJETO */
+    .projeto-visual { min-height: 260px; }
+    .projeto-content { padding: 40px 20px; }
+    .projeto-content p { font-size: 15px; }
+
+    /* LOCALIZAÇÃO */
+    .loc-address { font-size: 18px; }
+    .loc-text p { font-size: 15px; }
+    .loc-map-placeholder { height: 260px; }
+
+    /* ORBI HERO */
+    div[style*="70vh"] { height: 55vw !important; min-height: 280px; }
+
+    /* TABS */
+    .espacos-tabs { gap: 0; }
+    .tab-btn { padding: 14px 16px; font-size: 10px; letter-spacing: 0.15em; }
+    .espaco-visual { height: 260px; }
+    .espaco-name { font-size: 32px; }
+    .espaco-capacity { font-size: 10px; }
+    .espaco-desc { font-size: 14px; }
+    .espaco-features li { font-size: 12px; }
+
+    /* TECH */
+    .tech-card { padding: 36px 24px; }
+    .tech-card-title { font-size: 22px; }
+    .tech-card-text { font-size: 14px; }
+
+    /* GALERIA */
+    #galeria > div { grid-template-columns: 1fr !important; }
+    #galeria > div > div { height: 240px !important; }
+
+    /* FOYER */
+    div[style*="grid-template-columns: 1fr 1fr;"] { grid-template-columns: 1fr !important; }
+    div[style*="height:480px"] { height: 260px !important; }
+    div[style*="height:237px"] { height: 200px !important; }
+    div[style*="height:280px"] { height: 220px !important; }
+    div[style*="height:340px"] { height: 220px !important; }
+    div[style*="height:320px"] { height: 220px !important; }
+
+    /* PARCEIROS */
+    .parceiro-avatar { width: 60px; height: 60px; font-size: 24px; }
+    .parceiro-name { font-size: 28px; }
+    .parceiro-bio { font-size: 13px; }
+    .entrevista { gap: 40px; }
+    .entrevista-header h3 { font-size: 22px; }
+    .qa-q { font-size: 17px; }
+    .qa-a, .qa-placeholder { font-size: 14px; }
+
+    /* VALORES */
+    .valores-headline h2 { font-size: clamp(22px, 5vw, 36px); }
+    .valores-row { grid-template-columns: 1fr 1fr; }
+    .valores-cell { padding: 16px 16px; }
+    .val-price { font-size: 22px; }
+    .val-quantidade { font-size: 16px; }
+    .val-price-sub { font-size: 9px; }
+    .valores-row-header .valores-cell { font-size: 9px; padding: 12px 16px; }
+    .valores-note { font-size: 13px; }
+
+    /* INCLUSO */
+    .incluso-group { padding: 32px 20px; }
+    .incluso-group-title { font-size: 10px; }
+    .incluso-list li { font-size: 13px; }
+
+    /* ENCERRAMENTO */
+    .enc-content { padding: 60px 20px; }
+    .enc-title { font-size: clamp(36px, 9vw, 64px); }
+    .enc-tagline { font-size: 11px; letter-spacing: 0.25em; }
+    .enc-contact { font-size: 16px; }
+    .enc-footer { padding: 0 20px; font-size: 10px; }
+  }
+
+  @media (max-width: 380px) {
+    .capa-title { font-size: 26px; }
+    .section-title { font-size: 26px; }
+    .manifesto-quote { font-size: 28px; }
+    .stat-number { font-size: 40px; }
+    .enc-title { font-size: 32px; }
   }
 </style>
 </head>
